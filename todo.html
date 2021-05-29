@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    タスク名<input type="text" v-model="item.title" min="0">
+    推定時間（分）<input type="number" v-model="item.time" min="0">
+    <button v-on:click="doAdd">追加</button>
+    <table>
+      <tr>
+        <td class="task">タスク名</td>
+        <td class="time">推定時間（分）</td>
+      </tr>
+      <tr>
+        <td>{{item}}</td>
+        <td>{{time}}</td>
+      </tr>
+    </table>
+  </div>
+  
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      methods: {
+        doAdd: function() {
+          return ;
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
